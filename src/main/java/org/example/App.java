@@ -13,7 +13,7 @@ public class App {
         Javalin javalin = Javalin.create().start("localhost",2014);
         javalin.get("/", ctx ->{
             System.out.println(ctx.status());
-            ctx.render("regist.html");
+            ctx.render("regist.jte");
         });
         javalin.get("/home", App::renderMainPage);
         javalin.post("/api/regist/", ctx ->{
